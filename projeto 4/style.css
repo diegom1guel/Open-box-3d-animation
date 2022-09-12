@@ -1,0 +1,64 @@
+.face {
+    font-size: 20px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+.perspective {
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: perspective(7.5cm) rotateX(-15deg) rotateY(15deg);
+    margin-left: 600px;
+    margin-top: 200px;
+}
+.top {
+    background-color: skyblue;
+    transform: rotateX(-90deg) translate3d(0, 0, -50px);
+    transition: 1s linear transform;
+}
+.down {
+    background-color: orange;
+    transform: rotateX(-90deg) translate3d(0, 0, 50px);
+    transition: 1s linear transform;
+}
+.left {
+    background-color: pink;
+    transform: rotateY(-90deg) translate3d(0, 0, 50px);
+    transition: 1s linear transform;
+}
+.right {
+    background-color: purple;
+    transform: rotateY(-90deg) translate3d(0, 0, -50px);
+    transition: 1s linear transform;
+}
+.front {
+    background-color: limegreen;
+    transform: translate3d(0, 0, 50px);
+    transition: 1s linear transform;
+}
+.back {
+    background-color: yellow;
+    transform: translate3d(0, 0, -50px);
+    transition: 1s linear transform;
+}
+.perspective:hover .left {
+    transform: rotateY(-90deg) translate3d(0, 0, 200px);
+}
+.perspective:hover .right {
+    transform: rotateY(-90deg) translate3d(0, 0, -200px);
+}
+.perspective:hover .top {
+    transform: rotateX(-90deg) translate3d(0, 0, -200px);
+}
+.perspective:hover .down {
+    transform: rotateX(-90deg) translate3d(0, 0, 200px);
+}
+.perspective:hover .front {
+    transform: translate3d(0, 0, 200px);
+}
+.perspective:hover .back {
+    transform: translate3d(0, 0, -200px);
+}
